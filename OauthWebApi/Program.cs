@@ -22,6 +22,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseStaticFiles();
+
 app.MapGet("/LineLoginSetting", (IOptions<LineLoginConfig> lineLoginConfigOptions) => new
 {
     lineLoginConfigOptions.Value.ClientId, 
